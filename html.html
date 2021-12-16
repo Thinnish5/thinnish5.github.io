@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 <body>
     <div id="myData"></div>
     <script>
-        fetch('wifi.json')
+        fetch('people.json')
             .then(function (response) {
                 return response.json();
             })
@@ -23,7 +23,7 @@
             var mainContainer = document.getElementById("myData");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+                div.innerHTML = 'Nome: ' + data[i].firstName + ' ' + data[i].lastName;
                 mainContainer.appendChild(div);
             }
         }
